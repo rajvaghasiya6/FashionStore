@@ -1,0 +1,30 @@
+﻿#aboutus {
+    overflow: hidden;
+}
+.aboutus1 {
+    background: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url("../images/aboutus.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    width: 100%;
+    color: white;
+    margin: 0;
+}
+    .aboutus1 h3 p {
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+.headingab {
+    color: white;
+}
+
+.aboutus1 h3 {
+    color: #43e8d8;
+}
+
+.abdata {
+    margin-bottom: 50px;
+}

@@ -1,0 +1,110 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@200&display=swap');
+.product-container {
+    padding: 50px;
+    background-color: rgb(250, 249, 249);
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.products {
+    margin-bottom: 0px;
+}
+
+.product-card {
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding:20px;
+}
+
+    .product-card img {
+        margin: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding-bottom: 20px;
+        height: 250px;
+        width: 200px;
+    }
+
+.brand {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.description {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.off {
+    color: red;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.heading {
+    font-size: 2.4rem;
+    font-weight: 400;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 35px;
+}
+
+.favourite {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: rgb(255, 10, 104);
+}
+
+.line {
+    height: 1px;
+    width: 1000px;
+    background-color: rgb(44, 41, 41);
+    margin-bottom: 35px;
+}
+
+#categories {
+    margin-bottom: 50px;
+}
+
+.button1:hover {
+    color: black;
+    border-color: #43e8d8;
+    border-width: 1px;
+    background-color: white;
+}
+
+.button1 {
+    background-color: #43e8d8;
+    color: white;
+    font-family: 'Lato',sans-serif !important;
+    letter-spacing: .05rem;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 40px;
+}
+
+@media(max-width:767px) {
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .line {
+        width: 240px;
+    }
+
+    .card-title {
+        font-size: 17px;
+    }
+}
+.cf {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    font-family: 'Lato',sans-serif;
+    letter-spacing: .065rem;
+    color: #43e8d8;
+}

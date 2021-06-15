@@ -1,0 +1,36 @@
+﻿@model IEnumerable<E_Commerce.Models.ProductModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/products.css" />
+
+<div class="container product-container shadow">
+    <h1 class="heading">ALL PRODUCTS</h1>
+    <div class="line"></div>
+    <div class="row ">
+        @foreach (var item in Model)
+        {
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="card product-card text-center shadow">
+                    <a><img src="@Url.Content(item.ImageUrl)" width="300" height="350"></a>
+                    <a><h3 class="brand"> @Html.DisplayFor(modelItem => item.Name)</h3></a>
+                    <h4 class="description">@Html.DisplayFor(modelItem => item.Details)</h4>
+                    <h5 class="price">
+                        Rs. @Html.DisplayFor(modelItem => item.Price)
+                    </h5><br />
+                    @if (item.Stock <= 0)
+                    {
+                        <p style="color:red; font-size:large;">Out Of Stock</p>
+                    }
+                    else
+                    {
+                        <a class="cf" asp-action="AddCart" asp-route-id="@item.Id">Add to cart </a>
+                        <a  class="cf" asp-action="AddFavourite" asp-route-id="@item.Id"> Add to Favourite</a>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+ </div>
+

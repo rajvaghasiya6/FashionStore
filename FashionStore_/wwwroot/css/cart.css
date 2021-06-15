@@ -1,0 +1,25 @@
+﻿.cf {
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    font-family: 'Lato',sans-serif;
+    letter-spacing: .065rem;
+    color: #43e8d8;
+}
+.button1:hover {
+    color: black;
+    border-color: #43e8d8;
+    border-width: 1px;
+    background-color: white;
+}
+
+.button1 {
+    background-color: #43e8d8;
+    color: white;
+    font-family: 'Lato',sans-serif !important;
+    letter-spacing: .05rem;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 40px;
+}

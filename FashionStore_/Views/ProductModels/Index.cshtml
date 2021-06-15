@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FashionStore_.Models.ProductModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="heading">all products</h1>
+
+<p>
+    <a class="cf" asp-action="Create">Add New Product</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categery)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Details)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stock)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <img src="@Url.Content(item.ImageUrl)" width="200" height="200" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categery)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Details)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stock)
+            </td>
+            <td>
+                <a class="cf" asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                <a class="cf" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a class="cf" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

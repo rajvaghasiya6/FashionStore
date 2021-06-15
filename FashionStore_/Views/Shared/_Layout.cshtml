@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]  FashionStore</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/layout.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/images/logo.jpg" height="35" width="28">Fashion Store
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="UserProfile">User Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Cart">MyCart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Favourite">wishlist</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="OrderDetails">Your Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="aboutus">aboutus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Admin">Login as Admin</a>
+                    </li>
+                    <li>
+
+                        <form asp-controller="Home" asp-action="Search" method="post">
+                            <select name="text" class="dropdown1">
+                                <option value="All">All Product</option>
+                                <option value="men">men</option>
+                                <option value="women">women</option>
+                                <option value="kids">kids</option>
+                            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="submit" class="btn btn-outline button2 my-2 my-sm-0">Search</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="jumbotron footer">
+            <div class="row text-center">
+                <div class="col-12 col-md-4 col-sm-12 col-lg-4">
+                    <br>
+                    <h2>Download our App</h2>
+                    <P>
+                        Download app for android and ios mobile phone
+                    </P>
+                    <img src="~/images/play-store.png" width="100">
+                    <img src="~/images/app-store.png" width="100">
+                </div>
+                <div class="col-12 col-md-4 col-sm-12 col-lg-4">
+                    <br>
+                    <img src="~/images/logo.jpg" width="75" hight="75" alt=""><br>
+                    <br><P>
+                        Our purpose is to sustainable make the pleasure and benefits of sport accessible to the many.
+                    </P>
+                </div>
+                <div class="col-12 col-md-4 col-sm-12 col-lg-4 follow">
+                    <br>
+                    <h2>Folllow US</h2>
+                    <a href=""><i class="fab fa-instagram" aria-hidden="true">  Instagram</i></a><br>
+                    <a href=""><i class="fab fa-facebook-square" aria-hidden="true">  Facebook</i></a><br>
+                    <a href=""><i class="fab fa-twitter" aria-hidden="true">  twitter</i></a><br>
+                    <a href=""><i class="fas fa-envelope" aria-hidden="true">  Email</i></a><br>
+                </div>
+            </div>
+            <div class="text-center">
+                <br>
+                <p class="copyright">Copyright © 2020 FashionStore.com All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

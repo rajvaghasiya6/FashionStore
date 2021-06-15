@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+<link rel="stylesheet" href="~/css/admindashboard.css" />
+<div class="jumbotron products text-center shadow">
+        <h1 class="heading">admin dashboard</h1>
+        <div class="row text-center">
+            <div class="col-12 col-md-3 col-sm-12 col-lg-3"><div class="div1 shadow"><a class="cf" href="../ProductModels/Create">Add New Product</a></div></div>
+            <div class="col-12 col-md-3 col-sm-12 col-lg-3"><div class="div1 shadow"><a class="cf" href="../ProductModels/Index">View all Product</a></div></div>
+            <div class="col-12 col-md-3 col-sm-12 col-lg-3"><div class="div1 shadow"><a class="cf" href="../UserModels/Index">View all user</a></div></div>
+            <div class="col-12 col-md-3 col-sm-12 col-lg-3"><div class="div1 shadow"><a class="cf" asp-area="" asp-controller="Home" asp-action="AdminOrder">view All Order</a></div></div>
+        </div>
+</div>
